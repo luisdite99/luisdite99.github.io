@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+@font-face{
+    font-family: "AndBasR";
+    src: url("../AndBasR.ttf");
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.tabela{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.tabela table{
+    width: 60vh;
+    font-family: "AndBasR";
+    border: 1px solid;
+}
+.tabela table th{
+    background-color: #89ac6c;
+    color: #ffffff;
+}
+.tabela{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}

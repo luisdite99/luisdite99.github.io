@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+@font-face{
+    font-family: "AndBasR";
+    src: url("../AndBasR.ttf");
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+h1 {
+    font-family: "AndBasR";
+    color: #000000;
+}
+p{
+    font-family: "AndBasR";
+}

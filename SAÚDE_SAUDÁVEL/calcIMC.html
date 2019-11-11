@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Insira seu peso:</th>
+                <td><input type="text" id="peso"></td>
+            </tr>
+            <tr>
+                <th>Insira sua altura:</th>
+                <td><input type="text" id="altura"></td>
+            </tr>
+            <tr colspan="2">
+                <td><input type="button" value="Calcular" onclick="calc()"></button></td>
+            </tr>
+            <tr colspan="2">
+                <th>Seu IMC é: <label for="result" id="result"></label></th>
+            </tr>
+            <tr>
+                <th colspan="2"><label for="aviso" id="aviso"></label></th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function calc()
+        {
+            var a = document.getElementById("peso").value;
+            var b = document.getElementById("altura").value;
+            var aviso = "";
+          
+            soma = a / (b*b);
+            var valor = soma;
+
+            document.getElementById("result").innerHTML = valor;
+            console.log(a);
+            console.log(b);
+            console.log(soma);
+            console.log(aviso);
+
+
+            if (valor <= 17){
+                aviso = "Você está muito abaixo do peso recomendado!\nRecomendamos que procure um médico especializado\nimediatamante!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 17 && valor <= 18.49){
+                aviso = "Você está abaixo do peso recomendado!\nProcure um médico especializado!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 18.5 && valor <= 24.99){
+                aviso = "Você está no peso recomendado!\nParabéns continue assim!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 25 && valor <= 29.99){
+                aviso = "Você está acima do peso!\nProcure um médico!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 30 && valor <= 34.99){
+                aviso = "Você está Obeso!\nProcure um médico!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 35 && valor <= 39.99){
+                aviso = "Você está muito acima do peso!\nProcure urgentemente ajuda médica!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else if (valor > 40){
+                aviso = "Ainda consegue andar???";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            else{
+                aviso = "ERRO! Tente novamente!";
+                document.getElementById("aviso").innerHTML = aviso;
+            }
+            document.getElementById("aviso").innerHTML = aviso;
+        }
+    </script>
+    <!-- Insira seu peso<input type="text" id="num1">
+    Insira sua altura<input type="text" id="num2">
+    <input type="button" value="Solve" onclick="calc()">
+    Seu IMC é: <label for="result" id="result"></label>-->
+</body>
+</html>
